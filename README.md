@@ -31,15 +31,5 @@ These steps are needed to draw the captcha:
 
 
 
-- Between each character, the x position has to increase, otherwise all characters will be drawn on top of each other
 
-
-
-
-- I set up a preview segment field to create the pattern for each character.
-
-- You can set the size (x, y) and position. I wrote a string function which breaks the text at the end of the canvas.
-
-Just visit https://ben165.github.io/16_segment_font/html/index.html for the code and playground ;)
-
-Cheers Ben
+To be continued...
