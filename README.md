@@ -11,6 +11,7 @@ First, we need a font which represents some characters. An easy and very simple 
 Good readable characters are:
 
 ![text](IMG/7_segment_chatacters.JPG)
+
 0123456789ACEFHJLPU
 
 You need 7 lines to represent all options of this 7 segment font. I defined the origin of the coordinate system in the middle (more later). All lines are described in the variable SEGMENTS. You can say these lines are all normalised.
