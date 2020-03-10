@@ -64,6 +64,8 @@ is producing following result:
 
 ![text](IMG/bsp1.JPG)
 
+This is the original image.
+
 ## Example 2
 ```
 (line 58 and 59):
@@ -74,6 +76,20 @@ is producing following result:
 
 ![text](IMG/bsp2.JPG)
 
+A multiplication with an imaginary number leads to a rotation.
+
+## Example 2.5
+```
+(line 58 and 59):
+rpart = 0.5 #(random.random()/2 + 0.5)
+ipart = 0 #(1 - random.random() * 2) / 2
+```
+is producing following result:
+
+![text](IMG/bsp2.JPG)
+
+The scale is decreased.
+
 ## Example 3
 ```
 (line 58 and 59):
@@ -82,7 +98,7 @@ ipart = (1 - random.random() * 2) / 1.5
 ```
 is producing something like:
 
-![text](IMG/bsp2.JPG)
+![text](IMG/bsp3.JPG)
 
 
 That's all of it. You are welcome to improve it. Cheers!
