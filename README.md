@@ -35,11 +35,11 @@ The upper steps more detailed:
 
 1. First of all we have to create a new object:
 
-**width = 600**
-**height = 200**
-**a = captcha(width, height)**
-**a.plot_str('01234HALL0')**
-**a.output('test.svg')**
+*width = 600*
+*height = 200*
+*a = captcha(width, height)*
+*a.plot_str('01234HALL0')*
+*a.output('test.svg')*
 
 creates a file names test.svg in the same folder.
 
