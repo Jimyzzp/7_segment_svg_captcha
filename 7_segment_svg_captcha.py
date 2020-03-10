@@ -1,5 +1,4 @@
 import random
-import math
 
 class captcha:
 
@@ -14,7 +13,7 @@ class captcha:
   self.lines = []
 
   # Font size
-  self.sizex = 8
+  self.sizex = 16
   self.sizey = 16
 
   # Start positions
@@ -55,9 +54,9 @@ class captcha:
    a <<= 1
 
   # Obfuscating
-  if 0:
-   rpart = (random.random()/2 + 0.5)
-   ipart = (1 - random.random() * 2) / 2
+  if 1:
+   rpart = 0 #(random.random()/2 + 0.5)
+   ipart = 1 #(1 - random.random() * 2) / 2
    z1 = complex(rpart, ipart)
    
    z2 = complex(0,0)
@@ -112,8 +111,3 @@ rand_str = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'C', 'E', 'F'
 rand_str = ''.join(rand_str)
 a.plot_str(rand_str)
 a.output('test.svg')
-
-
-#a.debug()
-
-#print(a.create_bmp())
