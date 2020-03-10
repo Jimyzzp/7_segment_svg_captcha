@@ -39,14 +39,30 @@ The upper steps more detailed:
 width = 600
 height = 200
 a = captcha(width, height)
-a.plot_str('01234HALL0')
-a.output('test.svg')
 ```
 
-creates a file names test.svg in the same folder.
+To enter a specific string we have to call
 
+`a.plot_str('12345HALL0')`
 
+This function creates the line-points for all the characters. If the if-block in line 57 is active, all the points will be increased and/or rotated.
 
+The x and y coordinates for each point are translated in complex numbers. If you multiply this with another one, a transformation is happening. The j-value rotates and the r value changes the size.
+
+Example (line 58 and 59):
+```
+rpart = 1 #(random.random()/2 + 0.5)
+ipart = 0 #(1 - random.random() * 2) / 2
+```
+creates a file names test.svg in the same folder:
+
+a.plot_str('01234HALL0')
+
+a.output('test.svg')
+
+is producing following result:
+
+![text](IMG/bsp1.JPG)
 
 
 To be continued...
