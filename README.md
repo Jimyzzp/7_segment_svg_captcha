@@ -37,9 +37,13 @@ The upper steps more detailed:
 
 `
 width = 600
+
 height = 200
+
 a = captcha(width, height)
+
 a.plot_str('01234HALL0')
+
 a.output('test.svg')
 `
 
