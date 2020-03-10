@@ -86,7 +86,7 @@ ipart = 0 #(1 - random.random() * 2) / 2
 ```
 is producing following result:
 
-![text](IMG/bsp2.JPG)
+![text](IMG/bsp2_5.JPG)
 
 The scale is decreased.
 
