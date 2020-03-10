@@ -4,7 +4,7 @@ An example how an easy captcha can be created without fancy libraries and comple
 ![text](IMG/captcha_example_1.JPG)
 
 # The font
-First, we need a font which represents some characters. An easy and very simple is one which can be drawn in maximum of 7 lines, called 7 segment font. It's used by clocks and simple displays. Disadvantage: We can only use some characters of it, otherwise it would be too hard to recognize the right characters.  
+First, we need a font which represents some characters. An easy and very simple is one which can be drawn in maximum of 7 lines, called 7 segment font. It's used by clocks and calculators. Disadvantage: We can only use some characters of it, otherwise it would be too hard to recognize the right characters.  
 
 ![text](IMG/7_segment_font.png)
 
@@ -14,26 +14,25 @@ Good readable characters are:
 
 0123456789ACEFHJLPU
 
-You need 7 lines to represent all options of this 7 segment font. I defined the origin of the coordinate system in the middle (more later). All lines are described in the variable SEGMENTS. You can say these lines are all normalised.
+You need 7 lines to represent all options of this 7 segment font. I defined the origin of the coordinate system in the middle (more later). All lines are described in the variable SEGMENTS. These lines are normalised.
 
-Every character can be represented now in seven bits. Every bit which is set turns on a segment (or line). The characters are describes in the variable FONT.
+Every character can be represented with seven bits. Every bit which is set turns on a segment (or line). The characters are described in the variable FONT.
 
 
 # Drawing the captcha
 
 These steps are needed to draw the captcha:
 
-1. A function which takes a string (characters we want to obfuscate)
-2. Each character creates a bunch of points
-3. These points get now transformed to obfuscate the character. We can turn or increase it easily because the origin of the coordinating system is in the middle.
-4. The next step would be to increase the character to a given size and to put it next to each other. The x start position of each character is larger than the character before. Otherwise all characters would be on top of each other.
-6. The y coordinate of each point has to transform, cause the y axis begins on top on a SVG picture
-7. Draw all lines 
+1. A function which takes a string (characters we want to obfuscate) (def plot_str)
+2. Each character creates a bunch of line points (def create_7segchar)
+3. These points get transformed to obfuscate the character. We can turn or increase it easily because the origin of the coordinating system is in the middle (line 56 with line 58, 59).
+4. The next step would be to increase the character to a given size (line 15, line 85) and put it next to each other (line 92). The x start position of each character is larger than the character before. Otherwise all characters would be on top of each other.
+6. The y coordinate of each point has to transform, cause the y axis begins on top on a SVG picture (line 95)
+7. Draw all lines (line 24)
 
+# Going through
 
-The upper steps more detailed:
-
-1. First of all we have to create a new object:
+First of all we have to create a new object:
 
 ```
 width = 600
@@ -47,7 +46,7 @@ To enter a specific string we have to call
 
 This function creates the line-points for all the characters. If the if-block in line 57 is active, all the points will be increased and/or rotated.
 
-The x and y coordinates for each point are translated in complex numbers. If you multiply this with another one, a transformation is happening. The j-value rotates and the r value changes the size.
+The x and y coordinates for each point are translated in complex numbers. If you multiply this with another complex number, a transformation is happening. The j-value rotates and the r value changes the size.
 
 ## Example 1
 ```
